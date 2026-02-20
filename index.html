@@ -3,190 +3,494 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mobin Shahidi</title>
+  <title>Mobin Shahidi — AI Engineer & Software Developer</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Mobin Shahidi — AI Engineer & Software Developer. Research in recommender systems, explainability, NLP, and generative AI. Building reliable software and data-driven products." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mobin Shahidi — AI Engineer & Software Developer" />
+  <meta property="og:description" content="Research in recommender systems, explainability, NLP, and generative AI. Building reliable software and data-driven products." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="6.jpg" />
+
   <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fdfdfd;
-      color: #333;
-      line-height: 1.6;
+    :root{
+      --bg: #0b1220;
+      --panel: rgba(255,255,255,.06);
+      --text: #0f172a;
+      --muted: #475569;
+      --white: #ffffff;
+      --border: rgba(148,163,184,.25);
+      --shadow: 0 10px 30px rgba(2,6,23,.25);
+      --radius: 18px;
+      --max: 980px;
+      --accent: #7c3aed; /* purple */
+      --accent2: #22c55e; /* green */
     }
 
-    header {
-      background: #1e293b;
-      color: white;
-      padding: 40px 20px;
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior: smooth; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: #f8fafc;
+    }
+
+    /* Top nav */
+    .nav{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(248,250,252,.8);
+      border-bottom: 1px solid rgba(148,163,184,.25);
+    }
+    .nav-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand{
+      font-weight: 700;
+      letter-spacing: .2px;
+      color: #0f172a;
+      text-decoration: none;
+    }
+    .nav a{
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
+    .nav a:hover{ background: rgba(15,23,42,.06); }
+    .nav a:focus{ outline: 3px solid rgba(124,58,237,.35); outline-offset: 2px; }
+
+    /* Hero */
+    header{
+      background: radial-gradient(1200px 600px at 20% 20%, rgba(124,58,237,.35), transparent 60%),
+                  radial-gradient(900px 500px at 80% 30%, rgba(34,197,94,.22), transparent 60%),
+                  linear-gradient(180deg, #0b1220, #0b1220);
+      color: var(--white);
+      padding: 56px 18px 34px;
+    }
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .hero{
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 22px;
+      align-items: center;
+    }
+    .kicker{
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      width: fit-content;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .hero h1{
+      margin: 14px 0 8px;
+      font-size: clamp(34px, 4vw, 48px);
+      line-height: 1.12;
+      letter-spacing: -.6px;
+    }
+    .hero p{
+      margin: 8px 0 0;
+      color: rgba(255,255,255,.85);
+      font-size: 16px;
+      max-width: 62ch;
+    }
+    .cta-row{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .btn{
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.08);
+      color: #fff;
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(124,58,237,.95), rgba(34,197,94,.65));
+      border-color: rgba(255,255,255,.22);
+    }
+
+    .avatar{
+      width: min(260px, 60vw);
+      height: min(260px, 60vw);
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255,255,255,.22);
+      box-shadow: var(--shadow);
+      justify-self: end;
+    }
+
+    /* Main layout */
+    main{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 30px 18px 70px;
+    }
+    section{
+      margin-top: 34px;
+    }
+    .section-title{
+      font-size: 22px;
+      margin: 0 0 14px;
+      letter-spacing: -.2px;
+    }
+    .subtle{
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* Cards */
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card{
+      background: #fff;
+      border: 1px solid rgba(148,163,184,.25);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: 0 4px 16px rgba(2,6,23,.06);
+    }
+    .card h3{
+      margin: 0 0 8px;
+      font-size: 16px;
+      letter-spacing: -.15px;
+    }
+    .card p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .tags{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .tag{
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(15,23,42,.05);
+      border: 1px solid rgba(148,163,184,.25);
+      color: #0f172a;
+    }
+    .card .links{
+      margin-top: 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .link{
+      font-weight: 800;
+      font-size: 13px;
+      text-decoration: none;
+      color: #0f172a;
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(148,163,184,.35);
+      background: rgba(248,250,252,.75);
+    }
+    .link:hover{ background: rgba(15,23,42,.06); }
+
+    /* Skills list */
+    ul{
+      margin: 10px 0 0 18px;
+      padding: 0;
+    }
+
+    /* Tech stack */
+    .stack{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .stack img{
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      padding: 6px;
+      border-radius: 12px;
+      border: 1px solid rgba(148,163,184,.25);
+      background: #fff;
+    }
+
+    /* Contact */
+    .contact-row{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .icon-btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(148,163,184,.25);
+      background: #fff;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+    }
+    .icon-btn img{
+      width: 26px;
+      height: 26px;
+      object-fit: contain;
+    }
+
+    footer{
+      margin-top: 46px;
+      color: #64748b;
+      font-size: 13px;
       text-align: center;
     }
 
-    header img {
-      width: 30px;
-      vertical-align: middle;
+    /* Responsive */
+    @media (max-width: 860px){
+      .hero{ grid-template-columns: 1fr; }
+      .avatar{ justify-self: start; }
+      .grid{ grid-template-columns: 1fr; }
+      .nav-inner{ flex-wrap: wrap; }
     }
-
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-
-    h1, h2, h3 {
-      color: #1e293b;
-    }
-
-    section {
-      margin-bottom: 50px;
-    }
-
-    .tech-stack img {
-      width: 40px;
-      margin: 8px;
-      vertical-align: middle;
-    }
-
-    .contact img {
-      width: 40px;
-      margin: 8px;
-    }
-
-    .projects h3 {
-      margin-top: 15px;
-    }
-
-    .emoji {
-      font-size: 1.2em;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    @media (max-width: 600px) {
-      .tech-stack, .contact {
-        text-align: center;
-      }
-    }
-  .avatar {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1 style='color:#fff'> Welcome to my page!</h1>
-    <img src="6.jpg" alt="Avatar" class="avatar" />
-    <h1 style='color:#fff'> Mobin Shahidi</h1>
-    <p class="emoji">👀 I’m Mobin, experienced in AI engineering and software development.<br/>
-    💜 I'm passionate about applied science, start-ups, and e-commerce platforms.<br/>
-    🧩 I enjoy travelling, volleyball, and scientific podcasts.<br/>
-    🌞 Data is my religion.</p>
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">Mobin Shahidi</a>
+      <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#stack">Tech</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <header id="top">
+    <div class="wrap hero">
+      <div>
+        <div class="kicker">👋 AI Engineer • Software Developer</div>
+        <h1>Building trustworthy AI + clean, scalable software.</h1>
+        <p>
+          I work on recommender systems, information quality, explainability, NLP, and generative AI —
+          and I also ship production web apps and APIs end-to-end.
+        </p>
+
+        <div class="cta-row">
+          <!-- Add a real CV file if you have one -->
+          <a class="btn primary" href="MobinShahidi-CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+          <a class="btn" href="https://github.com/ParsProgrammer" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+
+        <p class="subtle" style="margin-top:14px;color:rgba(255,255,255,.7)">
+          Interests: applied science, start-ups, e-commerce • travel, volleyball, science podcasts • “Data is my religion.”
+        </p>
+      </div>
+
+      <img src="6.jpg" alt="Portrait of Mobin Shahidi" class="avatar" loading="eager" />
+    </div>
   </header>
 
   <main>
-    <section>
-      <div class="container">
-        <h2>This is what I bring to the table:</h2>
+    <section id="about">
+      <h2 class="section-title">What I bring to the table</h2>
+      <div class="card">
         <ul>
           <li>B.Sc. in Software Engineering and M.Sc. in Artificial Intelligence</li>
-          <li>4+ years of experience in end-to-end web application and API development through diverse projects</li>
-          <li>2+ years of professional AI research in recommender systems, information quality, explainability, natural language processing, machine learning, deep learning, generative AI, and reinforcement learning</li>
-          <li>Proficient in C#, Python (TensorFlow, PyTorch); familiar with C/C++, JavaScript, HTML, and CSS</li>
-          <li>Skilled in designing and conducting model experiments, performing evaluations, and interpreting results</li>
-          <li>Experienced with generative models, including transformers, GANs, and VAEs</li>
-          <li>Skilled in working with large datasets and building efficient data pipelines</li>
-          <li>Published research in recommender systems and active in ongoing projects</li>
-          <li>Knowledge of CI/CD practices (Jenkins, Docker) and agile development methodologies</li>
-          <li>Fluent in English with strong technical communication skills; actively learning German and driven by a growth mindset</li>
+          <li>4+ years building web applications and APIs end-to-end</li>
+          <li>2+ years professional AI research (RecSys, information quality, explainability, NLP, ML/DL, GenAI, RL)</li>
+          <li>C#, Python (TensorFlow, PyTorch); familiar with C/C++, JavaScript, HTML, CSS</li>
+          <li>Designing experiments, evaluations, and interpreting results</li>
+          <li>Transformers, GANs, VAEs; large datasets and efficient pipelines</li>
+          <li>Published research + ongoing projects</li>
+          <li>CI/CD (Jenkins, Docker) and agile practices</li>
+          <li>Fluent English; learning German</li>
         </ul>
-       </div>
-    </section>
-    <section class="projects">
-
-      <h2>Research Projects</h2>
-
-      <h3>🔍 Exogenous Cues</h3>
-      <p>Explored and evaluated contextual quality-related variables (exogenous cues) to enhance the information quality of media recommendations.</p>
-
-      <h3>🤝 Trustworthy Media Recommender</h3>
-      <p>Integrated contextual quality signals into recommendation algorithms to develop a more trustworthy model.</p>
-
-      <h3>💡 Explainable Recommendation System</h3>
-      <p>Built a multi-task framework that recommends items and generates user-personalized explanations for transparency.</p>
-
-      <h3>📡 Reddit Scraper for Political Discourse</h3>
-      <p>Developed APIs to collect and analyze subreddit discussions to assist research on online discourse.</p>
-
-      <h2>Software Projects</h2>
-
-      <h3>📸 Photocans</h3>
-      <p>Online platform for showcasing and selling software products with an admin dashboard and support tools.</p>
-
-      <h3>🏢 ReserveAfzar</h3>
-      <p>Automated system for booking conference halls at Bu-Ali Sina University.</p>
-
-      <h3>🏠 Real Estate Agency Management System</h3>
-      <p>Comprehensive web app for managing listings, transactions, and clients in real estate.</p>
+      </div>
     </section>
 
-    <section class="tech-stack">
-      <h1>Tech Stack</h1>
-      <p>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <p class="subtle">A mix of research and production software. Add links where possible for maximum impact.</p>
 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+      <h3 style="margin:16px 0 10px;">Research</h3>
+      <div class="grid">
+        <div class="card">
+          <h3>🔍 Exogenous Cues</h3>
+          <p>Contextual quality-related variables to improve the information quality of media recommendations.</p>
+          <div class="tags">
+            <span class="tag">RecSys</span><span class="tag">Info Quality</span><span class="tag">Evaluation</span>
+          </div>
+          <div class="links">
+            <!-- Replace # with real links -->
+            <a class="link" href="#" aria-disabled="true">Paper</a>
+            <a class="link" href="#" aria-disabled="true">Code</a>
+          </div>
+        </div>
 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" alt="OpenCV" />
+        <div class="card">
+          <h3>🤝 Trustworthy Media Recommender</h3>
+          <p>Integrated contextual quality signals into recommendation algorithms to build a more trustworthy model.</p>
+          <div class="tags">
+            <span class="tag">RecSys</span><span class="tag">Trust</span><span class="tag">Signals</span>
+          </div>
+          <div class="links">
+            <a class="link" href="#" aria-disabled="true">Paper</a>
+            <a class="link" href="#" aria-disabled="true">Demo</a>
+          </div>
+        </div>
 
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg" alt=".NET Core" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Blazor.png" alt="Blazor" />
-        <img src="ml-net.png" alt="ML.NET" />
+        <div class="card">
+          <h3>💡 Explainable Recommendation</h3>
+          <p>Multi-task framework that recommends items and generates personalized explanations.</p>
+          <div class="tags">
+            <span class="tag">XAI</span><span class="tag">NLP</span><span class="tag">Multi-task</span>
+          </div>
+          <div class="links">
+            <a class="link" href="#" aria-disabled="true">Paper</a>
+            <a class="link" href="#" aria-disabled="true">Code</a>
+          </div>
+        </div>
 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" />
-        <img src="ms sql server.png" alt="MS SQL Server" />
+        <div class="card">
+          <h3>📡 Reddit Scraper for Political Discourse</h3>
+          <p>APIs to collect and analyze subreddit discussions for online discourse research.</p>
+          <div class="tags">
+            <span class="tag">Data</span><span class="tag">APIs</span><span class="tag">NLP</span>
+          </div>
+          <div class="links">
+            <a class="link" href="#" aria-disabled="true">Code</a>
+          </div>
+        </div>
+      </div>
 
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="Visual Studio" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Jupyter" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
-        <img src="microsoft-iis-logo-png_seeklogo-484624.png" alt="IIS" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
-      </p>
+      <h3 style="margin:22px 0 10px;">Software</h3>
+      <div class="grid">
+        <div class="card">
+          <h3>📸 Photocans</h3>
+          <p>Platform for showcasing and selling software products with admin dashboard + support tools.</p>
+          <div class="tags">
+            <span class="tag">Web</span><span class="tag">Admin</span><span class="tag">E-commerce</span>
+          </div>
+          <div class="links">
+            <a class="link" href="#" aria-disabled="true">Live</a>
+            <a class="link" href="#" aria-disabled="true">Repo</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🏢 ReserveAfzar</h3>
+          <p>Automated booking system for conference halls at Bu-Ali Sina University.</p>
+          <div class="tags">
+            <span class="tag">Automation</span><span class="tag">Scheduling</span><span class="tag">Full-stack</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🏠 Real Estate Management</h3>
+          <p>Web app for managing listings, transactions, and clients in real estate.</p>
+          <div class="tags">
+            <span class="tag">CRUD</span><span class="tag">Dashboards</span><span class="tag">Database</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="contact">
-      <h1>Contact</h1>
-      <a href="https://stackoverflow.com/users/7961337/pars-programmer">
-        <img src="https://user-images.githubusercontent.com/91287064/208878662-a1aff4dd-d72e-44b3-bf0d-2d862a5f87f6.png" alt="Stack Overflow" />
-      </a>
-      <a href="https://github.com/ParsProgrammer">
-        <img src="https://user-images.githubusercontent.com/91287064/208878669-0146cc1a-b0a6-4a6e-9f4b-082c37264309.png" alt="GitHub" />
-      </a>
-      <a href="https://www.linkedin.com/in/mobin-shahidi/">
-        <img src="https://user-images.githubusercontent.com/91287064/208878686-01604f88-f0ac-4709-9cfc-2cc69b62d1aa.png" alt="LinkedIn" />
-      </a>
-      <a href="mailto:m.mobinshahidi@gmail.com">
-        <img src="https://user-images.githubusercontent.com/91287064/208878678-26652569-8d38-45c9-aa13-28a33a7fc967.png" alt="Email" />
-      </a>
+    <section id="stack">
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="card">
+        <div class="stack">
+          <!-- Add loading="lazy" everywhere for perf -->
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas" />
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn" />
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" alt="OpenCV" />
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg" alt=".NET Core" />
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Blazor.png" alt="Blazor" />
+          <img loading="lazy" src="ml-net.png" alt="ML.NET" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" />
+          <img loading="lazy" src="ms-sql-server.png" alt="MS SQL Server" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="Visual Studio" />
+          <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="Jupyter" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+          <img loading="lazy" src="microsoft-iis-logo.png" alt="IIS" />
+          <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
+        </div>
+        <p class="subtle" style="margin-top:12px">
+          Tip: rename local image files to avoid spaces (e.g., <strong>ms sql server.png</strong> → <strong>ms-sql-server.png</strong>).
+        </p>
+      </div>
     </section>
 
-  </main>
-
-</body>
-</html>
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-row">
+        <a class="icon-btn" href="https://stackoverflow.com/users/7961337/pars-programmer" target="_blank" rel="noopener noreferrer">
+          <img loading="lazy" src="https://user-images.githubusercontent.com/91287064/208878662-a1aff4dd-d72e-44b3-bf0d-2d862a5f87f6.png" alt="" />
+          Stack Overflow
+        </a>
+        <a class="icon-btn" href="https://github.com/ParsProgrammer" target="_blank" rel="noopener noreferrer">
+          <img loading="lazy" src="https://user-images.githubusercontent.com/91287064/208878669-0146cc1a-b0a6-4a6e-9f4b-082c37264309.png" alt="" />
+          GitHub
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/mobin-shahidi/" target="_blank" rel="noopener noreferrer">
+          <img loading="lazy" src="https://user-images.githubusercontent.com/91287064/208878686-01604f88-f0ac-4709-9cfc-2cc69b62d1aa.png" alt="" />
+          LinkedIn
+        </a>
+        <a class="icon-btn" href="mailto:m.mobinshahidi@gmail.com">
+          <img loading="lazy" src="https://user-images.githubusercontent.com/91287064/208878678-26652569-8d38-45c9-aa13-28a33a7fc967.png" alt="" />
+          Email
+        </a>
+      <
