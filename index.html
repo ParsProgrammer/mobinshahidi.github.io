@@ -388,92 +388,208 @@
       </div>
     </section>
 
-    <section id="projects">
-      <h2 class="section-title">Projects</h2>
-      <p class="subtle">A mix of research and production software. Add links where possible for maximum impact.</p>
+  <section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <p class="subtle">
+    Selected research and production projects in AI, recommender systems, and scalable web engineering.
+  </p>
 
-      <h3 style="margin:16px 0 10px;">Research</h3>
-      <div class="grid">
-        <div class="card">
-          <h3>🔍 Exogenous Cues</h3>
-          <p>Contextual quality-related variables to improve the information quality of media recommendations.</p>
-          <div class="tags">
-            <span class="tag">RecSys</span><span class="tag">Info Quality</span><span class="tag">Evaluation</span>
-          </div>
-          <div class="links">
-            <!-- Replace # with real links -->
-            <a class="link" href="#" aria-disabled="true">Paper</a>
-            <a class="link" href="#" aria-disabled="true">Code</a>
-          </div>
-        </div>
+  <!-- ================= Featured ================= -->
+  <h3 style="margin:20px 0 10px;">Featured Projects</h3>
 
-        <div class="card">
-          <h3>🤝 Trustworthy Media Recommender</h3>
-          <p>Integrated contextual quality signals into recommendation algorithms to build a more trustworthy model.</p>
-          <div class="tags">
-            <span class="tag">RecSys</span><span class="tag">Trust</span><span class="tag">Signals</span>
-          </div>
-          <div class="links">
-            <a class="link" href="#" aria-disabled="true">Paper</a>
-            <a class="link" href="#" aria-disabled="true">Demo</a>
-          </div>
-        </div>
+  <div class="grid">
 
-        <div class="card">
-          <h3>💡 Explainable Recommendation</h3>
-          <p>Multi-task framework that recommends items and generates personalized explanations.</p>
-          <div class="tags">
-            <span class="tag">XAI</span><span class="tag">NLP</span><span class="tag">Multi-task</span>
-          </div>
-          <div class="links">
-            <a class="link" href="#" aria-disabled="true">Paper</a>
-            <a class="link" href="#" aria-disabled="true">Code</a>
-          </div>
-        </div>
+    <!-- Quality-Aware Recommender -->
+    <div class="card">
+      <h3>📰 Quality-Aware News Recommender (University of Potsdam)</h3>
+      <p>
+        Designed and deployed a quality-aware recommender system that integrates 41 engineered
+        information-quality signals derived from 5M+ tweets to improve news source reliability.
+      </p>
 
-        <div class="card">
-          <h3>📡 Reddit Scraper for Political Discourse</h3>
-          <p>APIs to collect and analyze subreddit discussions for online discourse research.</p>
-          <div class="tags">
-            <span class="tag">Data</span><span class="tag">APIs</span><span class="tag">NLP</span>
-          </div>
-          <div class="links">
-            <a class="link" href="#" aria-disabled="true">Code</a>
-          </div>
-        </div>
+      <div class="tags">
+        <span class="tag">Recommender Systems</span>
+        <span class="tag">ML Pipelines</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Docker</span>
       </div>
 
-      <h3 style="margin:22px 0 10px;">Software</h3>
-      <div class="grid">
-        <div class="card">
-          <h3>📸 Photocans</h3>
-          <p>Platform for showcasing and selling software products with admin dashboard + support tools.</p>
-          <div class="tags">
-            <span class="tag">Web</span><span class="tag">Admin</span><span class="tag">E-commerce</span>
-          </div>
-          <div class="links">
-            <a class="link" href="#" aria-disabled="true">Live</a>
-            <a class="link" href="#" aria-disabled="true">Repo</a>
-          </div>
-        </div>
+      <p class="subtle" style="margin-top:10px;">
+        <strong>Impact:</strong> Increased average recommended source quality by +3 points
+        while maintaining baseline precision.
+      </p>
 
-        <div class="card">
-          <h3>🏢 ReserveAfzar</h3>
-          <p>Automated booking system for conference halls at Bu-Ali Sina University.</p>
-          <div class="tags">
-            <span class="tag">Automation</span><span class="tag">Scheduling</span><span class="tag">Full-stack</span>
-          </div>
-        </div>
+      <p class="subtle">
+        <strong>Stack:</strong> Python · Pandas · Scikit-learn · Docker · AWS · PyTest
+      </p>
+    </div>
 
-        <div class="card">
-          <h3>🏠 Real Estate Management</h3>
-          <p>Web app for managing listings, transactions, and clients in real estate.</p>
-          <div class="tags">
-            <span class="tag">CRUD</span><span class="tag">Dashboards</span><span class="tag">Database</span>
-          </div>
-        </div>
+    <!-- Explainable Recommender -->
+    <div class="card">
+      <h3>💡 Deep Learning Explainable Recommender (Master’s Thesis)</h3>
+      <p>
+        Built a large-scale NLP + recommendation framework over 151K reviews
+        combining multi-task learning and neural text generation to produce
+        personalized recommendations and explanations.
+      </p>
+
+      <div class="tags">
+        <span class="tag">PyTorch</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">NLP</span>
+        <span class="tag">Multi-task Learning</span>
       </div>
-    </section>
+
+      <p class="subtle" style="margin-top:10px;">
+        <strong>Impact:</strong> Achieved MSE 0.992 in rating prediction and ~0.97 semantic similarity in explanation generation.
+      </p>
+
+      <p class="subtle">
+        <strong>Stack:</strong> Python · PyTorch · TensorFlow · RNN · CNN · Transformers · GPU Training
+      </p>
+    </div>
+
+    <!-- News Quality Predictor -->
+    <div class="card">
+      <h3>📊 News Source Quality Predictor (Production ML)</h3>
+      <p>
+        Built and deployed a regression model estimating news source quality
+        using network and diversity features, exposed via API and interactive UI.
+      </p>
+
+      <div class="tags">
+        <span class="tag">FastAPI</span>
+        <span class="tag">SageMaker</span>
+        <span class="tag">Model Deployment</span>
+        <span class="tag">Observability</span>
+      </div>
+
+      <p class="subtle" style="margin-top:10px;">
+        <strong>Impact:</strong> Serverless SageMaker deployment with logging and CloudWatch monitoring for production inference.
+      </p>
+
+      <p class="subtle">
+        <strong>Stack:</strong> Python · FastAPI · AWS SageMaker · CloudWatch · Docker
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ================= Research ================= -->
+  <h3 style="margin:28px 0 10px;">Research & AI Systems</h3>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🔍 Exogenous Cues to Information Quality</h3>
+      <p>
+        Engineered contextual quality variables to enhance algorithmic newsfeeds
+        and improve information reliability in recommender systems.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Feature Engineering</span>
+        <span class="tag">Evaluation</span>
+        <span class="tag">Recommender Systems</span>
+      </div>
+
+      <p class="subtle">
+        <strong>Stack:</strong> Python · Scikit-learn · Statistical Modeling
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🤖 Workflow-Aware AI Assistant</h3>
+      <p>
+        Built a state-aware AI assistant integrated into a Next.js / Blazor
+        application, orchestrating OpenAI APIs and local LLMs (Mistral)
+        using LangChain for structured task execution.
+      </p>
+
+      <div class="tags">
+        <span class="tag">LLMs</span>
+        <span class="tag">LangChain</span>
+        <span class="tag">Next.js</span>
+        <span class="tag">System Orchestration</span>
+      </div>
+
+      <p class="subtle">
+        <strong>Stack:</strong> FastAPI · LangChain · OpenAI · Mistral · Next.js
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>📡 Automated Reddit Scraper</h3>
+      <p>
+        Developed a scalable Reddit data collection pipeline extracting threads,
+        comments, and interaction metadata for political discourse research.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Data Pipeline</span>
+        <span class="tag">APIs</span>
+        <span class="tag">NLP Data</span>
+      </div>
+
+      <p class="subtle">
+        <strong>Stack:</strong> R · Python · API Integration · Data Validation
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ================= Software ================= -->
+  <h3 style="margin:28px 0 10px;">Software & Product Engineering</h3>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>📸 PhotoCans – Image Management Platform (Startup)</h3>
+      <p>
+        Co-founded and delivered a commercial full-stack web platform
+        serving 100+ users with licensing, product management,
+        and operational dashboards.
+      </p>
+
+      <div class="tags">
+        <span class="tag">ASP.NET Core</span>
+        <span class="tag">REST APIs</span>
+        <span class="tag">SQL Server</span>
+        <span class="tag">IIS</span>
+      </div>
+
+      <p class="subtle" style="margin-top:10px;">
+        <strong>Impact:</strong> Implemented 33 REST endpoints and 12+ business workflows;
+        deployed and maintained across multiple production releases.
+      </p>
+
+      <p class="subtle">
+        <strong>Stack:</strong> C# · ASP.NET Core · JavaScript · SQL Server · IIS
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🏢 Hall Reservation Automation</h3>
+      <p>
+        Designed and deployed a university-wide scheduling system
+        reducing manual booking overhead and improving resource planning.
+      </p>
+
+      <div class="tags">
+        <span class="tag">ASP.NET</span>
+        <span class="tag">SQL Server</span>
+        <span class="tag">System Design</span>
+      </div>
+
+      <p class="subtle">
+        <strong>Stack:</strong> C# · ASP.NET · SQL Server · IIS
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
 
 <section id="stack">
   <h2 class="section-title">Tech Stack</h2>
