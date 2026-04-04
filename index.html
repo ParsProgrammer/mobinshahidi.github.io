@@ -424,55 +424,34 @@
 }
 
 
+.about-card ul{
+  margin: 0;
+  padding-left: 1.2rem;
+}
 
-     .career-highlights {
-    padding: 5rem 1.5rem;
-    background: #0f172a;
-    color: #e5e7eb;
-  }
+.about-card li{
+  margin-bottom: 0.55rem;
+  color: var(--muted);
+}
 
-  .career-highlights .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
+.about-block{
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(148,163,184,.2);
+}
 
-  .career-highlights h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.2rem;
-    color: #ffffff;
-  }
+.about-block:last-child{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
 
-  .career-highlights .intro {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #cbd5e1;
-    margin-bottom: 2.5rem;
-  }
-
-  .highlight-block {
-    margin-bottom: 2.2rem;
-  }
-
-  .highlight-block h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
-    color: #38bdf8;
-  }
-
-  .highlight-block ul {
-    padding-left: 1.2rem;
-    margin: 0;
-  }
-
-  .highlight-block li {
-    margin-bottom: 0.7rem;
-    line-height: 1.7;
-    color: #cbd5e1;
-  }
-
-  .highlight-block li:last-child {
-    margin-bottom: 0;
-  }
+.about-block h3{
+  margin: 0 0 10px;
+  font-size: 16px;
+  letter-spacing: -.1px;
+  color: #0f172a;
+}
     
   </style>
 </head>
@@ -531,50 +510,48 @@
 
   <main>
 
-  <section id="about" class="career-highlights">
-  <div class="container">
+ <section id="about">
+  <h2 class="section-title">About</h2>
+  <p class="subtle">
+    I work at the intersection of software systems, applied AI, and research,
+    building scalable production systems and intelligent recommender engines
+    with a focus on personalization, information quality, misinformation,
+    and trustworthy political news.
+  </p>
 
-    <h2>Career Highlights</h2>
-
-    <p class="intro">
-      I work at the intersection of <strong>software systems, applied AI, and research</strong>,
-      building scalable production systems and intelligent recommender engines with a focus on
-      <strong>personalization, information quality, and trustworthy content</strong>.
-    </p>
-
-    <div class="highlight-block">
-      <h3>⚙️ Software Systems & Production Engineering</h3>
+  <div class="card about-card">
+    <div class="about-block">
+      <h3>⚙️ Software Systems &amp; Production Engineering</h3>
       <ul>
-        <li>Built and deployed a production SaaS platform end-to-end as a startup co-founder</li>
-        <li>Designed scalable system architecture, implemented 33 REST APIs, and structured relational databases</li>
-        <li>Delivered and maintained multiple production releases serving real users</li>
-        <li>Developed backend systems using Python, FastAPI, ASP.NET Core, and modern web stacks</li>
-        <li>Deployed applications using Docker and AWS with CI/CD and monitoring practices</li>
+        <li>Built and deployed a production SaaS platform end-to-end as a startup co-founder.</li>
+        <li>Designed scalable system architecture, implemented 33 REST APIs, and structured relational databases.</li>
+        <li>Delivered and maintained multiple production releases serving real users.</li>
+        <li>Developed backend systems using Python, FastAPI, ASP.NET Core, and modern web stacks.</li>
+        <li>Deployed applications using Docker and AWS with CI/CD, monitoring, and production-focused workflows.</li>
       </ul>
     </div>
 
-    <div class="highlight-block">
-      <h3>🤖 AI/ML, Recommender Systems & Personalization</h3>
+    <div class="about-block">
+      <h3>🤖 AI/ML, Recommender Systems &amp; Personalization</h3>
       <ul>
-        <li>Designed personalized recommendation systems focused on relevance, trust, and user experience</li>
-        <li>Worked on ML systems addressing misinformation and political news content</li>
-        <li>Built large-scale data pipelines for recommendation and ranking tasks across millions of data points</li>
-        <li>Engineered features capturing content quality, user behavior, and contextual signals</li>
-        <li>Developed NLP and deep learning pipelines for content understanding and personalization</li>
+        <li>Designed personalized recommendation systems focused on relevance, trust, and user experience.</li>
+        <li>Worked on ML systems addressing misinformation and political news content.</li>
+        <li>Built large-scale data pipelines for recommendation and ranking tasks across millions of data points.</li>
+        <li>Engineered features capturing content quality, user behavior, and contextual signals.</li>
+        <li>Developed NLP and deep learning pipelines for content understanding and personalization.</li>
       </ul>
     </div>
 
-    <div class="highlight-block">
-      <h3>🧪 Research & Applied AI Engineering</h3>
+    <div class="about-block">
+      <h3>🧪 Research &amp; Applied AI Engineering</h3>
       <ul>
-        <li>Conducted applied research in ML, NLP, explainable AI, and recommender systems</li>
-        <li>Focused on information quality, misinformation, and trustworthy political news recommendation</li>
-        <li>Translated research ideas into production-oriented systems and scalable pipelines</li>
-        <li>Built explainable AI solutions combining user modeling, text processing, and generation</li>
-        <li>Emphasized reproducibility, structured experimentation, and reliable data workflows</li>
+        <li>Conducted applied research in ML, NLP, explainable AI, and recommender systems.</li>
+        <li>Focused on information quality, misinformation, and trustworthy recommendation in algorithmic political newsfeeds.</li>
+        <li>Translated research ideas into production-oriented systems and scalable pipelines.</li>
+        <li>Built explainable AI solutions combining user modeling, text processing, and generation.</li>
+        <li>Emphasized reproducibility, structured experimentation, and reliable data workflows.</li>
       </ul>
     </div>
-
   </div>
 </section>
 
