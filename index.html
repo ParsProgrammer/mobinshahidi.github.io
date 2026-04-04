@@ -422,6 +422,57 @@
   color: #777;
   font-size: 13px;
 }
+
+
+
+     .career-highlights {
+    padding: 5rem 1.5rem;
+    background: #0f172a;
+    color: #e5e7eb;
+  }
+
+  .career-highlights .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .career-highlights h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+    color: #ffffff;
+  }
+
+  .career-highlights .intro {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+    margin-bottom: 2.5rem;
+  }
+
+  .highlight-block {
+    margin-bottom: 2.2rem;
+  }
+
+  .highlight-block h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #38bdf8;
+  }
+
+  .highlight-block ul {
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+
+  .highlight-block li {
+    margin-bottom: 0.7rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+  }
+
+  .highlight-block li:last-child {
+    margin-bottom: 0;
+  }
     
   </style>
 </head>
@@ -480,43 +531,53 @@
 
   <main>
 
-    <section id="about">
-  <h2 class="section-title">Career Highlights</h2>
+  <section id="about" class="career-highlights">
+  <div class="container">
 
-  <div class="card">
-    <p>
-      My journey began in full-stack software engineering, where I co-founded
-      a startup and built a production SaaS platform from the ground up.
-      I designed system architecture, implemented 33 REST APIs, structured
-      relational databases, and deployed across multiple production releases —
-      serving over 100 users in real-world environments.
+    <h2>Career Highlights</h2>
+
+    <p class="intro">
+      I work at the intersection of <strong>software systems, applied AI, and research</strong>,
+      building scalable production systems and intelligent recommender engines with a focus on
+      <strong>personalization, information quality, and trustworthy content</strong>.
     </p>
 
-    <p style="margin-top:14px;">
-      Driven by a deep interest in intelligent systems, I transitioned into AI
-      and recommender systems research, focusing on information quality and trust
-      in algorithmic newsfeeds. At the University of Potsdam, I engineered
-      41 large-scale information-quality signals from 5M+ tweets and designed a
-      quality-aware recommender system that improved average recommended source
-      quality by +3 points while maintaining precision.
-    </p>
+    <div class="highlight-block">
+      <h3>⚙️ Software Systems & Production Engineering</h3>
+      <ul>
+        <li>Built and deployed a production SaaS platform end-to-end as a startup co-founder</li>
+        <li>Designed scalable system architecture, implemented 33 REST APIs, and structured relational databases</li>
+        <li>Delivered and maintained multiple production releases serving real users</li>
+        <li>Developed backend systems using Python, FastAPI, ASP.NET Core, and modern web stacks</li>
+        <li>Deployed applications using Docker and AWS with CI/CD and monitoring practices</li>
+      </ul>
+    </div>
 
-    <p style="margin-top:14px;">
-      Alongside this, I developed a deep learning explainable recommendation framework
-      combining NLP, multi-task learning, and neural text generation over 151K reviews.
-      The system achieved strong predictive performance (MSE 0.992) and produced
-      personalized explanations with high semantic consistency (~0.97 similarity),
-      bridging research innovation with practical evaluation.
-    </p>
+    <div class="highlight-block">
+      <h3>🤖 AI/ML, Recommender Systems & Personalization</h3>
+      <ul>
+        <li>Designed personalized recommendation systems focused on relevance, trust, and user experience</li>
+        <li>Worked on ML systems addressing misinformation and political news content</li>
+        <li>Built large-scale data pipelines for recommendation and ranking tasks across millions of data points</li>
+        <li>Engineered features capturing content quality, user behavior, and contextual signals</li>
+        <li>Developed NLP and deep learning pipelines for content understanding and personalization</li>
+      </ul>
+    </div>
 
-    <p style="margin-top:14px;">
-      Today, my focus lies at the intersection of production engineering and applied AI.
-      I deploy ML systems using Docker and AWS (SageMaker), integrate observability
-      and monitoring, build FastAPI-based inference services, and design workflow-aware
-      LLM systems using LangChain — combining research rigor with scalable software delivery.
-    </p>
+    <div class="highlight-block">
+      <h3>🧪 Research & Applied AI Engineering</h3>
+      <ul>
+        <li>Conducted applied research in ML, NLP, explainable AI, and recommender systems</li>
+        <li>Focused on information quality, misinformation, and trustworthy political news recommendation</li>
+        <li>Translated research ideas into production-oriented systems and scalable pipelines</li>
+        <li>Built explainable AI solutions combining user modeling, text processing, and generation</li>
+        <li>Emphasized reproducibility, structured experimentation, and reliable data workflows</li>
+      </ul>
+    </div>
+
   </div>
 </section>
+
 
     
     <section id="skills">
